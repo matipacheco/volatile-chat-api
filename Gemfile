@@ -16,8 +16,6 @@ gem 'sidekiq'
 
 gem 'graphql'
 
-gem 'factory_bot_rails'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -31,8 +29,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
 end
 

@@ -6,6 +6,7 @@
 
 ## Resources
 
+- [Using Factory Bot without ORM](https://thoughtbot.com/blog/tips-for-using-factory-girl-without-an-orm)
 - [Gemfile](https://bundler.io/man/gemfile.5.html)
 - [Sinatra](http://sinatrarb.com/intro.html)
 - [How to use Bundler with Sinatra](https://bundler.io/v2.0/guides/sinatra.html)

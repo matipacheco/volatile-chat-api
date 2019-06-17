@@ -1,24 +1,27 @@
+require 'pry'
 require 'securerandom'
 
-class GraphqlHelper
+module Graphql
 
-  query_string = "
-    mutation sendMessage($body: Json!){
-      sendMessage(body: $body) {
-        result
-        errors
+  class TestHelper
+
+    @query_string = "
+      mutation sendMessage($body: Json!){
+        sendMessage(body: $body) {
+          result
+          errors
+        }
       }
-    }
-  "
+    ".delete!("\n")
 
-  variables = {
-      "body" => {
-          "sender"    => SecureRandom.hex,
-          "receiver"  => SecureRandom.hex,
-          "message"   => "This is a test message"
-      }
-  }
+    def self.setup variables
+      { "query" => @query_string, "body" => variables.as_json }
+    end
 
-  VolatileChatApiSchema.execute(query_string, variables: variables)
+    def self.test_query variables
+      post "/graphql", params: setup(variables)
+    end
+
+  end
 
 end
