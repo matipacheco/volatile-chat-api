@@ -1,6 +1,3 @@
-require 'pry'
-require 'securerandom'
-
 module Graphql
 
   class TestHelper
@@ -12,14 +9,10 @@ module Graphql
           errors
         }
       }
-    ".delete!("\n")
+    "
 
-    def self.setup variables
-      { "query" => @query_string, "body" => variables.as_json }
-    end
-
-    def self.test_query variables
-      post "/graphql", params: setup(variables)
+    def self.build_params variables
+      { "query" => @query_string, "variables" => { "body" => variables.as_json } }
     end
 
   end

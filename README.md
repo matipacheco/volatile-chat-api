@@ -6,8 +6,8 @@
 
 ## Resources
 
+- [GraphQL Ruby](https://graphql-ruby.org/)
+- [Rspec Rails](https://github.com/rspec/rspec-rails)
+- [Testing GraphQL Mutations In Ruby On Rails With RSpec](https://selleo.com/blog/testing-graphql-mutations-in-ruby-on-rails-with-rspec)
 - [Using Factory Bot without ORM](https://thoughtbot.com/blog/tips-for-using-factory-girl-without-an-orm)
 - [Gemfile](https://bundler.io/man/gemfile.5.html)
-- [Sinatra](http://sinatrarb.com/intro.html)
-- [How to use Bundler with Sinatra](https://bundler.io/v2.0/guides/sinatra.html)
-- [Sinatra Dockerfile](https://github.com/tongueroo/sinatra/blob/master/Dockerfile)
