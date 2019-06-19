@@ -5,7 +5,26 @@
 
 ## Manually test the publish endpoint
 
-    r
+    query_string = "
+      mutation sendMessage($body: Json!){
+        sendMessage(body: $body) {
+          result
+          errors
+        }
+      }
+    "
+
+    VolatileChatApiSchema.execute(
+        query_string,
+        variables: {
+            body: {
+                sender: "mati",
+                receiver: "maca",
+                message: "<3"
+            }
+        }
+    )
+
 ## Resources
 
 - [Gemfile](https://bundler.io/man/gemfile.5.html)
