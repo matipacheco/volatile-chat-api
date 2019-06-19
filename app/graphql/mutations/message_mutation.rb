@@ -7,6 +7,8 @@ module Mutations
       begin
         check_for_participants(body)
 
+        PubSub.publish(body)
+
         { :result => "success" }
 
       rescue Exception => e

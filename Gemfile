@@ -12,7 +12,6 @@ gem 'puma', '~> 3.11'
 # Use Redis adapter to run Action Cable in production
 
 gem 'redis'
-gem 'sidekiq'
 
 gem 'graphql'
 
