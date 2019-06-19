@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__) + '/../rails_helper')
 
 describe 'Send Message tests' do
 
-  context 'Unknown participants' do
+  context 'Invalid request: missing participant' do
 
     it 'should raise invalid request exception' do
       unknown_sender = FactoryBot.build(:unknown_sender)
