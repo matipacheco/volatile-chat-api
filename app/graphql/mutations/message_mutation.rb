@@ -1,13 +1,15 @@
 module Mutations
+
+  # Class that holds the logic that allows us to publish a message in Redis
+  # Note: Im using Redis as a messaging system.
   class SendMessage < Mutations::BaseMutation
     argument :body, Types::JsonType, required: true
 
-    # Push a message to Redis, since Im using Redis as a message broker
     def resolve(body:)
       begin
         check_for_participants(body)
 
-        PubSub.publish(body)
+        PubSub::Publisher.publish_message(body)
 
         { :result => "success" }
 
@@ -30,4 +32,5 @@ module Mutations
     end
 
   end
+
 end

@@ -1,5 +1,7 @@
 require 'redis'
 
+# Singleton class that makes available a Redis
+# instance to the rest of the classes of the project.
 class ChatRoom
   include Singleton
 
