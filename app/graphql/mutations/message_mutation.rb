@@ -9,7 +9,7 @@ module Mutations
       begin
         check_for_participants(body)
 
-        PubSub::Publisher.publish_message(body)
+        PubSub.publish_message(body)
 
         { :result => "success" }
 

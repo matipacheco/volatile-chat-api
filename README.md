@@ -39,7 +39,14 @@ Open up a new Rails console tab and copy-paste both the string and method shown 
 
 ## What is happening here?
 
-Once the 
+We set up a process that is continuously checking incoming messages to Redis. In the image below we can see that the message is sent using directly the GraphQL Schema (right half of the picture), then the image is stored/published in Redis (bottom of the left half of the picture) and then the subscribe process detects that a message was published, and prints out the message.
+
+![](public/volatile_chat.png)
+
+# Todo
+
+1. The subscribed method still needs to be tuned!
+2. This project is just an API. The frontend part of it still needs to be implemented.
 
 ## Resources
 
